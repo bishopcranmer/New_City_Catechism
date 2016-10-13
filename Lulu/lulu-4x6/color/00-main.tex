@@ -1,0 +1,148 @@
+% !TeX program = pdflatex
+
+% May want to change the font size in this declaration.
+\documentclass[twoside,titlepage]{memoir}
+
+\usepackage{subfiles}
+
+%% Personal page style
+\copypagestyle{myPageStyle}{ruled}
+\makeevenfoot{myPageStyle}{\thepage}{}{}
+\makeoddfoot{myPageStyle}{}{}{\thepage}
+
+
+%% INDEXING PACKAGES AND COMMANDS
+\usepackage[makeindex,nonewpage,splitindex]{imakeidx}
+	\indexsetup{level=\subsubsection, toclevel=\subsubsection,noclearpage=true}
+
+\makeindex
+	\makeindex[name=people]
+	\makeindex[name=book]
+
+\makeindex[columns=2,name=gen,title=Genesis]
+\makeindex[columns=2,name=exo,title=Exodus]
+\makeindex[columns=2,name=lev,title=Leviticus]
+\makeindex[columns=2,name=num,title=Numbers]
+\makeindex[columns=2,name=deu,title=Deuteronomy]
+\makeindex[columns=2,name=jos,title=Joshua]
+\makeindex[columns=2,name=jdg,title=Judges]
+\makeindex[columns=2,name=rut,title=Ruth]
+\makeindex[columns=2,name=1sa,title=1 Samuel]
+\makeindex[columns=2,name=2sa,title=2 Samuel]
+\makeindex[columns=2,name=1ki,title=1 Kings]
+\makeindex[columns=2,name=2ki,title=2 Kings]
+\makeindex[columns=2,name=1ch,title=1 Chronicles]
+\makeindex[columns=2,name=2ch,title=2 Chronicles]
+\makeindex[columns=2,name=ezr,title=Ezra]
+\makeindex[columns=2,name=neh,title=Nehemiah]
+\makeindex[columns=2,name=est,title=Esther]
+\makeindex[columns=2,name=job,title=Job]
+\makeindex[columns=2,name=psa,title=Psalms]
+\makeindex[columns=2,name=pro,title=Proverbs]
+\makeindex[columns=2,name=ecc,title=Ecclesiastes]
+\makeindex[columns=2,name=son,title=Song of Solomon]
+\makeindex[columns=2,name=isa,title=Isaiah]
+\makeindex[columns=2,name=jer,title=Jeremiah]
+\makeindex[columns=2,name=lam,title=Lamentations]
+\makeindex[columns=2,name=eze,title=Ezekiel]
+\makeindex[columns=2,name=dan,title=Daniel]
+\makeindex[columns=2,name=hos,title=Hosea]
+\makeindex[columns=2,name=joe,title=Joel]
+\makeindex[columns=2,name=amo,title=Amos]
+\makeindex[columns=2,name=oba,title=Obadiah]
+\makeindex[columns=2,name=jon,title=Jonah]
+\makeindex[columns=2,name=mic,title=Micah]
+\makeindex[columns=2,name=nah,title=Nahum]
+\makeindex[columns=2,name=hab,title=Habakkuk]
+\makeindex[columns=2,name=zep,title=Zephaniah]
+\makeindex[columns=2,name=hag,title=Haggai]
+\makeindex[columns=2,name=zec,title=Zechariah]
+\makeindex[columns=2,name=mal,title=Malachi]
+\makeindex[columns=2,name=mat,title=Matthew]
+\makeindex[columns=2,name=mar,title=Mark]
+\makeindex[columns=2,name=luk,title=Luke]
+\makeindex[columns=2,name=joh,title=John]
+\makeindex[columns=2,name=act,title=Acts]
+\makeindex[columns=2,name=rom,title=Romans]
+\makeindex[columns=2,name=1co,title=1 Corinthians]
+\makeindex[columns=2,name=2co,title=2 Corinthians]
+\makeindex[columns=2,name=gal,title=Galatians]
+\makeindex[columns=2,name=eph,title=Ephesians]
+\makeindex[columns=2,name=phi,title=Philippians]
+\makeindex[columns=2,name=col,title=Colossians]
+\makeindex[columns=2,name=1th,title=1 Thessalonians]
+\makeindex[columns=2,name=2th,title=2 Thessalonians]
+\makeindex[columns=2,name=1ti,title=1 Timothy]
+\makeindex[columns=2,name=2ti,title=2 Timothy]
+\makeindex[columns=2,name=tit,title=Titus]
+\makeindex[columns=2,name=phm,title=Philemon]
+\makeindex[columns=2,name=heb,title=Hebrews]
+\makeindex[columns=2,name=jam,title=James]
+\makeindex[columns=2,name=1pe,title=1 Peter]
+\makeindex[columns=2,name=2pe,title=2 Peter]
+\makeindex[columns=2,name=1jo,title=1 John]
+\makeindex[columns=2,name=2jo,title=2 John]
+\makeindex[columns=2,name=3jo,title=3 John]
+\makeindex[columns=2,name=jud,title=Jude]
+\makeindex[columns=2,name=rev,title=Revelation]
+
+%% PACKAGES AND COMMANDS FOR HYPERREFERENCING IN PDF, GRAPHICS INCLUSION, FONT
+
+\usepackage{graphicx}
+
+\usepackage[oldstyle,proportional]{libertine}
+
+
+%% PERSONAL COMMANDS FOR CHILDREN'S TEXT
+% % AND BIBLE VERSE CITATIONS
+
+\usepackage{color}
+
+\usepackage{ifthen}
+	\ifthenelse{\isundefined{\textcolor}}{\newcommand\Children[1]{\textbf{#1}}}{\newcommand\Children[1]{\textcolor{red}{#1}}}
+
+\newcommand\Quote[2]{\begin{quote}{\small\textbf{#1: }{\em #2}}\end{quote}}
+
+
+%% LIMITING ToC REFERENCES TO \SECTION LEVEL
+\setcounter{secnumdepth}{1}
+
+% % MODIFYING SLASH SO THAT IT'S BREAKABLE
+
+\newcommand{\Slash}{\slash{\hspace{0em}}}
+
+
+% % PAGE LAYOUT SPECIFICS - REQUIRES THE `MEMOIR' CLASS
+% % % % % % % % % % % % % %mem
+
+\input{../page_settings.tex}
+
+\usepackage{microtype}
+
+\begin{document}
+
+\frontmatter
+
+\subfile{../../../01-front_matter.tex}
+
+\mainmatter
+
+\pagestyle{myPageStyle}
+\pagenumbering{arabic}
+
+\subfile{../../../02-introduction.tex}
+
+\subfile{../../../03-catechism.tex}
+
+\subfile{../../../04-FAQ.tex}
+
+\pagestyle{empty}
+
+\backmatter
+
+\subfile{05-back_matter.tex}
+
+\subfile{06-backpg.tex}
+
+\end{document}
+

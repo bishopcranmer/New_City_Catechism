@@ -1,0 +1,182 @@
+% !TeX root = 00-main.tex
+% !TeX program = lualatex
+% !TeX spellcheck = en_US
+% !TeX encoding = utf8
+
+% May want to change the font size in this declaration.
+\documentclass{memoir}
+\usepackage{cmap,mmap} % must come after document class
+
+%\input{page_settings-11x85.tex}
+\usepackage{subfiles}
+\usepackage{comment}
+
+\usepackage[mla]{xellipsis}
+	\renewcommand{\dots}{\xelip}
+
+%% Personal page styles
+\copypagestyle{myPageStyle}{Ruled}
+\makeevenfoot{myPageStyle}{\thepage}{}{}
+\makeoddfoot{myPageStyle}{}{}{\thepage}
+
+\copypagestyle{myPlainStyle}{plain}
+\makeevenfoot{myPlainStyle}{\thepage}{}{}
+\makeoddfoot{myPlainStyle}{}{}{\thepage}
+
+
+%% INDEXING PACKAGES AND COMMANDS
+\usepackage[makeindex,nonewpage,splitindex]{imakeidx}
+	\indexsetup{level=\subsubsection, toclevel=\subsubsection,noclearpage=true}
+
+\makeindex
+\makeindex[name=people]
+\makeindex[name=books]
+
+%% Bible books
+
+\makeindex[columns=3,name=gen,title=Genesis]
+\makeindex[columns=3,name=exo,title=Exodus]
+\makeindex[columns=3,name=lev,title=Leviticus]
+\makeindex[columns=3,name=num,title=Numbers]
+\makeindex[columns=3,name=deu,title=Deuteronomy]
+\makeindex[columns=3,name=jos,title=Joshua]
+\makeindex[columns=3,name=jdg,title=Judges]
+\makeindex[columns=3,name=rut,title=Ruth]
+\makeindex[columns=3,name=1sa,title=1 Samuel]
+\makeindex[columns=3,name=2sa,title=2 Samuel]
+\makeindex[columns=3,name=1ki,title=1 Kings]
+\makeindex[columns=3,name=2ki,title=2 Kings]
+\makeindex[columns=3,name=1ch,title=1 Chronicles]
+\makeindex[columns=3,name=2ch,title=2 Chronicles]
+\makeindex[columns=3,name=ezr,title=Ezra]
+\makeindex[columns=3,name=neh,title=Nehemiah]
+\makeindex[columns=3,name=est,title=Esther]
+\makeindex[columns=3,name=job,title=Job]
+\makeindex[columns=3,name=psa,title=Psalms]
+\makeindex[columns=3,name=pro,title=Proverbs]
+\makeindex[columns=3,name=ecc,title=Ecclesiastes]
+\makeindex[columns=3,name=son,title=Song of Solomon]
+\makeindex[columns=3,name=isa,title=Isaiah]
+\makeindex[columns=3,name=jer,title=Jeremiah]
+\makeindex[columns=3,name=lam,title=Lamentations]
+\makeindex[columns=3,name=eze,title=Ezekiel]
+\makeindex[columns=3,name=dan,title=Daniel]
+\makeindex[columns=3,name=hos,title=Hosea]
+\makeindex[columns=3,name=joe,title=Joel]
+\makeindex[columns=3,name=amo,title=Amos]
+\makeindex[columns=3,name=oba,title=Obadiah]
+\makeindex[columns=3,name=jon,title=Jonah]
+\makeindex[columns=3,name=mic,title=Micah]
+\makeindex[columns=3,name=nah,title=Nahum]
+\makeindex[columns=3,name=hab,title=Habakkuk]
+\makeindex[columns=3,name=zep,title=Zephaniah]
+\makeindex[columns=3,name=hag,title=Haggai]
+\makeindex[columns=3,name=zec,title=Zechariah]
+\makeindex[columns=3,name=mal,title=Malachi]
+\makeindex[columns=3,name=mat,title=Matthew]
+\makeindex[columns=3,name=mar,title=Mark]
+\makeindex[columns=3,name=luk,title=Luke]
+\makeindex[columns=3,name=joh,title=John]
+\makeindex[columns=3,name=act,title=Acts]
+\makeindex[columns=3,name=rom,title=Romans]
+\makeindex[columns=3,name=1co,title=1 Corinthians]
+\makeindex[columns=3,name=2co,title=2 Corinthians]
+\makeindex[columns=3,name=gal,title=Galatians]
+\makeindex[columns=3,name=eph,title=Ephesians]
+\makeindex[columns=3,name=phi,title=Philippians]
+\makeindex[columns=3,name=col,title=Colossians]
+\makeindex[columns=3,name=1th,title=1 Thessalonians]
+\makeindex[columns=3,name=2th,title=2 Thessalonians]
+\makeindex[columns=3,name=1ti,title=1 Timothy]
+\makeindex[columns=3,name=2ti,title=2 Timothy]
+\makeindex[columns=3,name=tit,title=Titus]
+\makeindex[columns=3,name=phm,title=Philemon]
+\makeindex[columns=3,name=heb,title=Hebrews]
+\makeindex[columns=3,name=jam,title=James]
+\makeindex[columns=3,name=1pe,title=1 Peter]
+\makeindex[columns=3,name=2pe,title=2 Peter]
+\makeindex[columns=3,name=1jo,title=1 John]
+\makeindex[columns=3,name=2jo,title=2 John]
+\makeindex[columns=3,name=3jo,title=3 John]
+\makeindex[columns=3,name=jud,title=Jude]
+\makeindex[columns=3,name=rev,title=Revelation]
+
+%% PACKAGES AND COMMANDS FOR COLOR, HYPERREFERENCING IN PDF, GRAPHICS INCLUSION, FONT
+
+\usepackage{graphicx}
+
+\usepackage[proportional]{libertine}
+
+%% PERSONAL COMMANDS FOR CHILDREN'S TEXT AND BIBLE VERSE CITATIONS
+%% ALSO LIMITING ToC REFERENCES TO \SECTION LEVEL
+
+
+
+% Outline numbering
+\setcounter{secnumdepth}{0}
+% T.O.C. number
+\setcounter{tocdepth}{1}
+
+% % MODIFYING SLASH SO THAT IT'S BREAKABLE
+
+\newcommand\Quote[2]{\begin{quote}{\textbf{#1: }{\emph{ #2}}}\end{quote}}
+
+\newenvironment{NameCite}[4]{\vspace{-1em}\begin{flushright} #1 #2\index[people]{#2, #1} \cite{#3}, #4.}{\end{flushright}}
+
+\usepackage{color}
+\usepackage{ifthen}\ifthenelse{\isundefined{\textcolor}}{\newcommand\Children[1]{\textbf{#1}}}{\newcommand\Children[1]{\textcolor{red}{#1}}}
+
+% % PAGE LAYOUT SPECIFICS - REQUIRES THE `MEMOIR' CLASS
+% % % % % % % % % % % % % %
+
+%\urlstyle{same}
+
+\usepackage[hyperref=auto]{biblatex}
+	\addbibresource{NCCBiblio.bib}
+
+\usepackage[%
+	breaklinks=true,
+	frenchlinks=true,
+	hyperfootnotes=false,
+	%pagebackref=true,
+	unicode=true,
+	pdftitle={New City Catechism},
+	pdfauthor={Timothy Keller and Sam Shammas},
+	pdfsubject={catechism},
+	pdfkeywords={catechism, catechesis},
+	hyperindex=true]{hyperref}
+
+\usepackage{microtype}
+
+\begin{document}
+
+	
+\frontmatter
+
+\subfile{01-front_matter.tex}
+
+\mainmatter
+
+\pagestyle{myPageStyle}
+
+\subfile{02-introduction.tex}
+
+\subfile{03-catechism.tex}
+
+\backmatter
+
+\pagestyle{myPlainStyle}
+
+\subfile{04-FAQ.tex}
+
+\subfile{05-personalities.tex}
+
+\pagestyle{plain}
+
+\backmatter
+
+\subfile{06-back_matter.tex}
+
+
+\end{document}
+

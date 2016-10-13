@@ -1,0 +1,41 @@
+.part-theme .theme-left {
+	background-image:url("../images/part1-theme-left-small.png");
+}
+.part-theme .theme-right {
+	background-image:url("../images/part1-theme-right-small.png");
+}
+.part2 .part-theme .theme-left {
+	background-image:url("../images/part2-theme-left-small.png");
+}
+.part2 .part-theme .theme-right {
+	background-image:url("../images/part2-theme-right-small.png");
+}
+
+.part3 .part-theme .theme-left {
+	background-image:url("../images/part3-theme-left-small.png");
+}
+.part3 .part-theme .theme-right {
+	background-image:url("../images/part3-theme-right-small.png");
+}
+
+
+
+.content-toggle>li {
+	background-image:url("../images/icon-bg-small.png");
+}
+* + html .content-toggle>li {
+	display:inline;
+	zoom:1;
+}
+.content-toggle>li.on {
+	background-image:url("../images/icon-bg-part1-small.png");
+}
+.part2 .content-toggle>li.on {
+	background-image:url("../images/icon-bg-part2-small.png");
+}
+.part3 .content-toggle>li.on {
+	background-image:url("../images/icon-bg-part3-small.png");
+}
+.content-toggle>li>a {
+    background-image:url("../images/icon-sprite-small.png");
+}

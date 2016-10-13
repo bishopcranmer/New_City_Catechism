@@ -1,0 +1,872 @@
+% !TeX program = pdflatex
+
+% May want to change the font size in this declaration.
+\documentclass[]{memoir}
+
+
+%% INDEXING PACKAGES AND COMMANDS
+
+\usepackage[makeindex,nonewpage,splitindex]{imakeidx}
+	\indexsetup{level=\subsubsection, toclevel=\subsubsection,noclearpage=true}
+	
+\makeindex
+	\makeindex[name=people]
+	\makeindex[name=book]
+
+\makeindex[columns=4,name=gen,title=Genesis]
+\makeindex[columns=4,name=exo,title=Exodus]
+\makeindex[columns=4,name=lev,title=Leviticus]
+\makeindex[columns=4,name=num,title=Numbers]
+\makeindex[columns=4,name=deu,title=Deuteronomy]
+\makeindex[columns=4,name=jos,title=Joshua]
+\makeindex[columns=4,name=jdg,title=Judges]
+\makeindex[columns=4,name=rut,title=Ruth]
+\makeindex[columns=4,name=1sa,title=1 Samuel]
+\makeindex[columns=4,name=2sa,title=2 Samuel]
+\makeindex[columns=4,name=1ki,title=1 Kings]
+\makeindex[columns=4,name=2ki,title=2 Kings]
+\makeindex[columns=4,name=1ch,title=1 Chronicles]
+\makeindex[columns=4,name=2ch,title=2 Chronicles]
+\makeindex[columns=4,name=ezr,title=Ezra]
+\makeindex[columns=4,name=neh,title=Nehemiah]
+\makeindex[columns=4,name=est,title=Esther]
+\makeindex[columns=4,name=job,title=Job]
+\makeindex[columns=4,name=psa,title=Psalms]
+\makeindex[columns=4,name=pro,title=Proverbs]
+\makeindex[columns=4,name=ecc,title=Ecclesiastes]
+\makeindex[columns=4,name=son,title=Song of Solomon]
+\makeindex[columns=4,name=isa,title=Isaiah]
+\makeindex[columns=4,name=jer,title=Jeremiah]
+\makeindex[columns=4,name=lam,title=Lamentations]
+\makeindex[columns=4,name=eze,title=Ezekiel]
+\makeindex[columns=4,name=dan,title=Daniel]
+\makeindex[columns=4,name=hos,title=Hosea]
+\makeindex[columns=4,name=joe,title=Joel]
+\makeindex[columns=4,name=amo,title=Amos]
+\makeindex[columns=4,name=oba,title=Obadiah]
+\makeindex[columns=4,name=jon,title=Jonah]
+\makeindex[columns=4,name=mic,title=Micah]
+\makeindex[columns=4,name=nah,title=Nahum]
+\makeindex[columns=4,name=hab,title=Habakkuk]
+\makeindex[columns=4,name=zep,title=Zephaniah]
+\makeindex[columns=4,name=hag,title=Haggai]
+\makeindex[columns=4,name=zec,title=Zechariah]
+\makeindex[columns=4,name=mal,title=Malachi]
+\makeindex[columns=4,name=mat,title=Matthew]
+\makeindex[columns=4,name=mar,title=Mark]
+\makeindex[columns=4,name=luk,title=Luke]
+\makeindex[columns=4,name=joh,title=John]
+\makeindex[columns=4,name=act,title=Acts]
+\makeindex[columns=4,name=rom,title=Romans]
+\makeindex[columns=4,name=1co,title=1 Corinthians]
+\makeindex[columns=4,name=2co,title=2 Corinthians]
+\makeindex[columns=4,name=gal,title=Galatians]
+\makeindex[columns=4,name=eph,title=Ephesians]
+\makeindex[columns=4,name=phi,title=Philippians]
+\makeindex[columns=4,name=col,title=Colossians]
+\makeindex[columns=4,name=1th,title=1 Thessalonians]
+\makeindex[columns=4,name=2th,title=2 Thessalonians]
+\makeindex[columns=4,name=1ti,title=1 Timothy]
+\makeindex[columns=4,name=2ti,title=2 Timothy]
+\makeindex[columns=4,name=tit,title=Titus]
+\makeindex[columns=4,name=phm,title=Philemon]
+\makeindex[columns=4,name=heb,title=Hebrews]
+\makeindex[columns=4,name=jam,title=James]
+\makeindex[columns=4,name=1pe,title=1 Peter]
+\makeindex[columns=4,name=2pe,title=2 Peter]
+\makeindex[columns=4,name=1jo,title=1 John]
+\makeindex[columns=4,name=2jo,title=2 John]
+\makeindex[columns=4,name=3jo,title=3 John]
+\makeindex[columns=4,name=jud,title=Jude]
+\makeindex[columns=4,name=rev,title=Revelation]
+
+
+%% PACKAGES AND COMMANDS FOR COLOR, HYPERREFERENCING IN PDF, GRAPHICS INCLUSION, FONT
+
+\usepackage{color}
+
+\usepackage{hyperref}
+	\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, breaklinks=true, pdftitle={New City Catechism}, pdfauthor={Timothy Keller and Sam Shammas}, pdfsubject=Catechism, pdfkeywords={catechism, catechesis}}
+
+\usepackage{graphicx}
+
+\usepackage{libertine}
+
+
+%% PERSONAL COMMANDS FOR CHILDREN'S TEXT AND BIBLE VERSE CITATIONS
+%% ALSO LIMITING ToC REFERENCES TO \SECTION LEVEL
+
+% Text styles
+\newcommand\Children[1]{\textbf{\textcolor{red}{#1}}}
+
+\newcommand\Quote[2]{\begin{quote}{\textbf{#1:}{ #2}}\end{quote}}
+
+% Outline numbering
+\setcounter{secnumdepth}{1}
+
+
+% % PAGE LAYOUT SPECIFICS - REQUIRES THE `MEMOIR' CLASS
+% % % % % % % % % % % % % %
+
+\setstocksize{9in}{6in}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+% Check binding specifications on Lulu site
+	\setbinding{0.091in}
+\setlxvchars[\sffamily]
+\setlength{\trimtop}{0pt}
+\settypeblocksize{6.92in}{4.62in}{*}
+\setulmargins{*}{*}{1.618}
+\setlrmargins{*}{*}{1.618}
+\checkandfixthelayout
+
+
+\usepackage{microtype}
+
+
+\begin{document}
+
+%% SHOULDN'T NEED THIS ANYMORE, BUT JUST IN CASE
+
+% \indexmarkstyle{\normalfont\tiny\sffamily}
+
+% \showindexmarks
+
+
+
+\pagestyle{empty}
+
+\vfill
+
+\begin{center}
+	\begin{minipage}{3in}
+	{\centering
+	\Huge{New City Catechism}
+	\par}
+	\end{minipage}
+\end{center}
+
+\vfill
+
+\begin{center}
+	\begin{minipage}{3in}
+	{\centering
+	Adapted By\\
+	Timothy Keller And Sam Shammas\\
+	From The\\
+	Reformation Catechisms.\par}
+	\end{minipage}
+\end{center}
+
+\vfill
+
+\begin{center}
+	\begin{minipage}{3in}
+	\begin{center}
+	{\em Printed by and for the use of\\ St.\ John the Evangelist Anglican Church,\\ with permission.}
+	\end{center}
+	\end{minipage}
+\end{center}
+
+\vfill
+
+\cleardoublepage
+\pagenumbering{roman}
+
+\chapter*{New City Catechism}
+
+\section*{Adapted By Timothy Keller And Sam Shammas From The Reformation Catechisms.}
+
+Printed by and for the use of St.\ John the Evangelist Anglican Church.
+
+\vspace{-1em}
+
+\begin{center}
+\emph{PO Box 387\,\textbullet\,709 Easton Road\\
+Willow Grove, PA, 19090-0387\\
+215-396-1970\\
+www.toknowchrist.org\\
+info@toknowchrist.org}
+\end{center}
+
+Pursuant to the copyright (details of which are on the following page), we:
+
+\begin{itemize}
+	\item {\em may}\/ use and share this material freely,
+	\item {\em may not}\/ charge money for it, change the wording, or remove the copyright information.
+\end{itemize}
+
+Accordingly:
+
+\begin{itemize}
+	\item Copies of this document are available for free from the church office at info@to\hspace{0em}know\hspace{0em}christ.\hspace{0em}org, from our web site (http:\slash{}\slash{}www.to\hspace{0em}know\hspace{0em}christ.org), or from http:\slash{}\slash{}www.new\hspace{0em}city\hspace{0em}cate\hspace{0em}chism.\hspace{0em}com.
+	\item It is our plan to provide printed copies from Lulu Press, Inc. printing services (www.lulu.com) at cost. When that plan comes to fruition, St.\ John's will make no profit whatsoever: the cost on the web site will be exactly that which St.\ John's must pay in order to obtain printed copies.
+\end{itemize}
+
+A fuller presentation of {\em New City Catechism}\/ can be found outline at http:\slash{}\slash{}www.new\hspace{0em}city\hspace{0em}cat\hspace{0em}echism.\hspace{0em}com, with related texts of Scripture, a commentary from various authors, prayer, suggestions for further reading, a video explanation, and songs for kids related to each question. You can also find a link for an excellently conceived and executed iPad application.
+
+\cleardoublepage
+
+\section*{{\em New City Catechism}\/ Copyright Notices}
+
+\begin{itemize}
+	\item Devised and adapted by Timothy Keller and Sam Shammas from the Reformation catechisms, produced by Ben Peays.
+	\item Copyright {\textcopyright} 2012 by Redeemer Presbyterian Church.
+	\item We encourage you to use and share this material freely\thinspace{}---\thinspace{}but please don't charge money for it, change the wording, or remove the copyright information.
+	\item NIV Scripture quotations are taken from The Holy Bible, New International Version,\textsuperscript{{\textregistered}} NIV\textsuperscript{{\textregistered}}. Copyright {\textcopyright} 1973, 1978, 1984, 2011 by Biblica, Inc.{\texttrademark} Used by permission. All rights reserved worldwide.
+	\item ESV Scripture quotations are from The Holy Bible, English Standard Version\textsuperscript{{\textregistered}} (ESV\textsuperscript{{\textregistered}}), copyright {\textcopyright} 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
+	\item Videos produced by The Gospel Coalition and Redeemer Presbyterian Church. Directed by Sam Shammas. Filmed by Scott Smith. Edited by Peter Ostebo.
+	\item App by Brushfire.
+	\item The Gospel Coalition and Redeemer Presbyterian Church would like to thank all those who trialled, reviewed, and participated in the filming of {\em New City Catechism}.
+	\item All songs provided by Songs for Saplings, Portland, OR. Songs are from the Questions with Answers series by Dana Dirksen, based on the Westminster Shorter Catechism, 1647. More info at http:\slash{}\slash{}songs\hspace{0em}for\hspace{0em}sap\hspace{0em}lings.com.
+\end{itemize}
+
+\cleardoublepage
+
+\setcounter{tocdepth}{2}
+
+\tableofcontents
+
+\cleardoublepage
+
+%\pagestyle{headings}
+\pagestyle{myPageStyle}
+\pagenumbering{arabic}
+
+\mainmatter
+
+\chapter{Introduction}
+
+\hspace{3ex}\textbf{Question 1. What is the chief end of man?\newline
+Answer.} Man's chief end is to glorify God and to enjoy him forever.
+
+\textbf{Question 1. What is your only comfort in life and death?\newline
+Answer.} That I am not my own, but belong\thinspace{}---\thinspace{}body and soul, in life and in death\thinspace{}---\thinspace{}to my faithful Savior, Jesus Christ.
+
+\smallskip
+
+These words, the opening of the Westminster\index{Westminster Catechisms} and {\em Heidelberg Catechism}s,\index[book]{Heidelberg Catechism} find echoes in many of our creeds and statements of faith. They are familiar to us from sermons and books, and yet most people do not know their source and have certainly never memorized them as part of the catechisms from which they derive.
+
+Today many churches and Christian organizations publish ``statements of faith''\index{Statements of faith} that outline their beliefs. But in the past it was expected that documents of this nature would be so biblically rich and carefully crafted that they would be memorized and used for Christian growth and training. They were written in the form of questions and answers\index{Questions \& answers}, and were called catechisms (from the Greek {\em katechein}\index{katechein@{\em katechein}}\/ which means ``to teach orally or to instruct by word of mouth''). The \index[book]{Heidelberg Catechism}{\em Heidelberg Catechism}\/ of 1563\index{1563} and \index[book]{Westminster Shorter Catechism}\index[book]{Westminster Larger Catechism}{\em Westminster Shorter and Larger Catechisms}\/ of \index{1648}1648 are among the best known, and they serve as the doctrinal standards of many churches in the world today.
+
+\section{The Lost Practice Of Catechesis}
+\index{Catechesis!Need}At present, the practice of catechesis, particularly among adults, has been almost completely lost. Modern discipleship\index{Discipleship} programs concentrate on practices such as Bible study,\index{Bible study} prayer,\index{Prayer} fellowship,\index{Fellowship} and evangelism\index{Evangelism} and can at times be superficial when it comes to doctrine.\index{Doctrine} In contrast, the classic catechisms take students through the Apostles' Creed,\index{Apostles' Creed} the Ten Commandments,\index{Ten Commandments} and the Lord's Prayer\index{Lord's Prayer}\thinspace{}---\thinspace{}a perfect balance of biblical theology,\index{Theology} practical ethics,\index{Ethics} and spiritual experience. Also, the catechetical discipline of memorization\index{Memorization} drives concepts deeper into the heart and naturally holds students more accountable to master the material than do typical discipleship courses. Finally, the practice of question\thinspace{}---\thinspace{}answer\index{Questions \& answers} recitation brings instructors and students into a naturally interactive,\index{Interactivity} dialogical process of learning.
+
+In short, catechetical instruction is less individualistic and more communal. Parents\index{Parents} can catechize their children.\index{Children} Church leaders\index{Leaders} can catechize new members with shorter catechisms and new leaders with more extensive ones. Because of the richness of the material, catechetical questions and answers may be integrated into corporate worship\index{Corporate worship} itself, where the church as a body can confess their faith and respond to God with praise.
+
+Because we have lost the practice of catechesis today: ``Superficial smatterings of truth, blurry notions about God and godliness, and thoughtlessness about the issues of living\thinspace{}---\thinspace{}career-wise, community-wise, family-wise, and church-wise\thinspace{}---\thinspace{}are all too often the marks of evangelical congregations today {\dots}'' (From \index[book]{Grounded in the Gospel}{\em Grounded in the Gospel: Building Believers the Old-Fashioned Way}, by Gary Parrett\index[people]{Parrett, Gary} and J.~I.\ Packer,\index[people]{Packer, J.I.} published by Baker, 2010.)\index{Catechesis|)}
+
+\section{Why Write New Catechisms?}
+There are many ancient, excellent, and time-tested catechisms. Why expend the effort to write new ones? In fact, some people might suspect the motives of anyone who would want to do so. However, most people today do not realize that it was once seen as normal, important, and necessary for churches to continually produce new catechisms for their own use. The original Anglican\index{Anglicans} \index[book]{Book of Common Prayer}{\em Book of Common Prayer}\/ included a catechism. The Lutheran\index{Lutherans} churches had Luther's \index[book]{Luther's Large Catechism@Luther's {\em Large Catechism}}{\em Large Catechism}\/ and \index[book]{Luther's Small Catechism@Luther's {\em Small Catechism}}{\em Small Catechism}\/ of \index{1529}1529. The early Scottish\index{Scottish churches} churches though they had \index[book]{Geneva Catechism}Calvin's {\em Geneva Catechism}\/ of \index{1541}1541, and the \index[book]{Heidelberg Catechism}{\em Heidelberg Catechism}\/ of \index{1563}1563, went on to produce and use \emph{Craig's Catechism}\index[book]{Craig's Catechism@Craig's {\em Catechism}}\/ of \index{1581}1581, \emph{Duncan's Latin Catechism}\index[book]{Latin Catechism}\/ of 1595\index{1595}, and \emph{The New Catechism}\index[book]{New Catechism, The}\/ of \index{1644}1644, before eventually adopted the \emph{Westminster Catechism}\index[book]{Westminster Catechisms}.
+
+The Puritan pastor Richard Baxter\index[people]{Baxter, Richard}, who ministered in the 17\textsuperscript{th} century town of Kidderminster,\index{Kidderminster} was not unusual. He wanted to systematically train heads of families to instruct their households in the faith. To do so he wrote his own \emph{Family Catechism}\index[book]{Family Catechism}\/ that was adapted to the capacities of his people and that brought the Bible to bear on many of the issues and questions his people were facing at that time.
+
+\index{Catechesis!Purposes|(}Catechisms were written with at least three purposes. The first was to set forth a comprehensive exposition of the gospel\thinspace{}---\thinspace{}not only in order to explain clearly what the gospel is, but also to layout the building blocks on which the gospel is based, such as the biblical doctrine of God, of human nature, of sin, and so forth. The second purpose was to do this exposition in such a way that the heresies, errors, and false beliefs of the time and culture were addressed and counteracted. The third and more pastoral purpose was to form a distinct people, a counter-culture that reflected the likeness of Christ not only in individual character but also in the church's communal life.
+
+When looked at together, these three purposes explain why new catechisms must be written. While our exposition of gospel doctrine must be in line with older catechisms that are true to the Word, culture changes and so do the errors, temptations, and challenges to the unchanging gospel that people must be equipped to face and answer.\index{Catechesis!Purposes|)}
+
+\section{A Joint Adult And Children's Catechism}
+\emph{New City Catechism}\/ is comprised of only 52 questions and answers\index{Questions \& answers} (as opposed to \emph{Heidelberg's}\/ 129\index[book]{Heidelberg Catechism} or \index[book]{Westminster Shorter Catechism}\emph{Westminster Shorter's}\/ 107).\footnote{Editor's note: or the ACNA's\index{ACNA} 345 questions.} There is therefore only one question and answer for each week of the year, making it simple to fit into church calendars and achievable even for people with demanding schedules.
+
+It is a joint adult and children's catechism. In other words, the same questions are asked of both children and adults, and the children's answer\index{Answers!Children} is always part of the adult answer\index{Answers!Adults}. This means that as parents are teaching it to their children they are learning their answer to the question at the same time, albeit an abridged version. The adult answer is always an expanded version of the children's answer. In the adult version the children's answer appears in \Children{color}\footnote{Editor's note: in the black \& white version, the text is simply \Children{bolded}.} to differentiate it from the longer adult answer.
+
+\emph{New City Catechism}\/ is based on and adapted from \index[book]{Geneva Catechism}\emph{Calvin's Geneva Catechism}, the \index[book]{Westminster Shorter Catechism}\emph{Westminster Shorter}\/ and \index[book]{Westminster Larger Catechism}\emph{Larger Catechism}s, and especially the \index[book]{Heidelberg Catechism}\emph{Heidelberg Catechism}, giving good exposure to some of the riches and insights across the spectrum of the great Reformation-era\index{Reformation} catechisms, the hope being that it will encourage people to delve into the historic catechisms and continue the catechetical process throughout their lives.
+
+It is divided into 3 parts to make it easier to learn in sections and to include some helpful divisions:
+\index{Catechism sections}
+\begin{itemize}
+	\item Part 1 = God, creation and fall, law (20 questions);
+	\item Part 2 = Christ, redemption, grace (15 questions);
+	\item Part 3 = Spirit, restoration, growing in grace (17 questions).
+\end{itemize}
+
+As with most traditional catechisms there is a Bible verse\index{Bible verses} that accompanies each question and answer. In addition, attached to each question and answer there is a short commentary and a short prayer\footnote{Editor's note: these prayers and commentaries can be found at http:/\slash{}www.new\hspace{0em}city\hspace{0em}cate\hspace{0em}chism.\hspace{0em}com.} taken from the writings or sayings of past preachers to help students meditate on and think about the topic being explored. As far as possible a commentary and prayer has been included from the same preacher in each of the 3 Parts so that students can become familiar with their style and work. Those quoted in all 3 Parts are, in chronological order: John Chrysostom\index[people]{Chrysostom, John}, Augustine of Hippo\index[people]{Augustine of Hippo}, Martin Luther\index[people]{Luther, Martin}, John Calvin\index[people]{Calvin, John}, Richard Sibbes\index[people]{Sibbes, Richard}, John Bunyan\index[people]{Bunyan, John}, Jonathan Edwards\index[people]{Edwards, Jonathan}, John Wesley\index[people]{Wesley, John}, Abraham Booth\index[people]{Booth, Abraham}, Charles Haddon Spurgeon\index[people]{Spurgeon, Charles Haddon}, John Charles Ryle\index[people]{Ryle, John Charles}, C.~S.\ Lewis\index[people]{Lewis, C.S.}, David Martyn Lloyd-Jones\index[people]{Lloyd-Jones, David Martyn}, and John Stott\index[people]{Stott, John}. Students are therefore able to read 3 commentaries and 3 prayers from each of these preachers. John Owen\index[people]{Owen, John} and Richard Baxter\index[people]{Baxter, Richard} have been quoted in Parts 1 and 3. John Bradford\index[people]{Bradford, John}, Heinrich Bullinger\index[people]{Bullinger, Heinrich}, Thomas Brooks\index[people]{Brooks, Thomas}, George Whitefield\index[people]{Whitefield, George}, Charles Simeon\index[people]{Simeon, Charles}, and Francis Schaeffer\index[people]{Schaeffer, Francis} feature once with a commentary and a prayer from each.
+
+In the children's version the questions and answers are accompanied by the same Bible verse\index{Bible verses} as the adult version. In addition the prayers\index{Prayers} from the adult version have been adapted, modernized, shortened, and simplified for children.
+
+Also included in the adult version is a further reading\index{Further reading}\footnote{Editor's note: remember that all additional elements of the \emph{New City Catechism}\/ not included in this document are found on the web site: http:/\slash{}www.new\hspace{0em}city\hspace{0em}cate\hspace{0em}chism.\hspace{0em}com.} section. In order to make this as manageable as possible suggested readings are drawn from only two books: J.~I.\ Packer's\index[people]{Packer, J.I.} \emph{Concise Theology}\index[book]{Concise Theology}\/ (published by Tyndale) and Donald Macleod's\index[people]{Macleod, Donald} \emph{A Faith to Live By}\index[book]{A Faith to Live By}\/ (published by Mentor or Christian Focus).
+
+To accompany all this written material there are also short video commentaries from some of the council members of The Gospel Coalition\index{Gospel Coalition, The} and the pastors of Redeemer Presbyterian Church\index{Redeemer Presbyterian Church}. As with the textual commentaries from historic preachers, as far as possible, a video commentary from each of the current preachers has been included in each of the 3 Parts. Those featured in the filmed commentaries are, in alphabetical order: Thabiti Anyabwile\index[people]{Anyabwile, Thabiti}, Alistair Begg\index[people]{Begg, Alistair}, David Bisgrove\index[people]{Bisgrove, David}, D.~A.\ Carson\index[people]{Carson, D.A.}, Mark Dever\index[people]{Dever, Mark}, Kevin DeYoung\index[people]{DeYoung, Kevin}, Ligon Duncan\index[people]{Duncan, Ligon}, Joshua Harris\index[people]{Harris, Joshua}, Kent Hughes\index[people]{Hughes, Kent}, Timothy Keller\index[people]{Keller, Timothy}, John Lin\index[people]{Lin, John}, Crawford Loritts\index[people]{Loritts, Crawford}, John Piper\index[people]{Piper, John}, Juan Sanchez\index[people]{Sanchez, Juan}, Leo Schuster\index[people]{Schuster, Leo}, Stephen Um\index[people]{Um, Stephen}, and John Yates\index[people]{Yates, John}. The hope is that the textual and filmed commentaries provide complementary insights into the theme of each particular question and answer.
+
+\section{The Use Of Archaic Language}
+\index{Archaic Language, Use of|(}Although it may make the content seem less accessible at first glance, the language of the original texts has been retained as much as possible throughout the commentaries and prayers.
+
+When people complained to J.R.R.\ Tolkien\index[people]{Tolkien, J.R.R.} about the archaic language he sometimes used, he answered that language carries cultural values and therefore his use of older forms was not nostalgia\thinspace{}---\thinspace{}it was principled. He believed that older ways of speaking conveyed older ways of understanding life that modern forms cannot convey, because modern language is enmeshed with modern views of life.
+
+As an example, Tolkien points to a passage in \emph{The Lord of the Rings}\index[book]{Lord of the Rings, The}\/ where members of the Fellowship are choosing weapons and the (archaic) wording runs as follows: ``Helms too they chose.'' Some (wrongly) class the wording as an ``inversion'', since normal order is ``They also chose helmets'' or ``They chose helmets too.'' But, Tolkien comments that modern English has lost the trick of putting the word that one desires to be emphasized (for pictorial, emotional, or logical reasons) into prominent first place, without the addition of a lot of little ``empty'' words. The much terser and more vivid ancient styles often convey gravity and meaning in a way they would not were they modernized. (See Tolkien's letter to Professor Hugh Brogan\index[people]{Brogan, Hugh, Professor} in \emph{The Letters of J.R.R.\ Tolkien}\index[book]{Letters of J.R.R.~Tolkien, The}, edited by Humphrey Carpenter, published by Houghton Mifflin, 1981.)
+
+For this reason, except in cases where the words are no longer in common use and are therefore incomprehensible (in which instances they often have been replaced with ellipses) the language and spelling of the original authors has been retained throughout the commentaries and prayers. Occasionally this is also true in some of the questions and answers where the more poetic forms\index{Poetic forms} aid memorization.\index{Archaic Language, Use of|)}
+
+
+\section{How To Use \emph{New City Catechism}}
+\index{Catechesis!Usage|(}\emph{New City Catechism}\/ consists of 52 questions and answers so the easiest way to use it is to memorize one question and answer each week of the year. Because it is intended to be dialogical it is best to learn it in pairs, in families, or as study groups, enabling you to drill one another on the answers not only one at a time but once you have learned 10 of them, then 20 of them, and so on.
+
+The Bible verse, written and filmed commentary, and prayer that are attached to each question and answer can be used as your devotion on a chosen day of the week to help you think through and meditate on the issues and applications that arise from the question and answer. Note that some of the prayers are not directly addressed to God but are more exhortational in nature. As you read these prayers you can make them your own by praying the petitions to God or by taking the statements and turning them into petitions and prayers. For example if the text says: ``I love the Lord for he heard my voice and heard my cry for mercy.'' You can pray: ``Lord, I love you because so many times, you have heard my voice and my cry for mercy.''
+
+Groups may decide to spend the first 5--10 minutes of their study time looking together at only one question and answer thus completing the catechism in a year, or they may prefer to study and learn the questions and answers over a contracted length of time, for example by memorizing 5 or 6 questions a week and meeting together to quiz one another, discuss them, as well as read and watch the accompanying commentaries.
+
+For families, it is intended for parents to help their children memorize the children's answer and then for parents to learn the longer, extended adult answer themselves. Parents will have different ways of approaching the memorization process depending on their children and their particular circumstances\thinspace{}---\thinspace{}so there are no prescribed times of day or particular devotional practices attached. When and how parents use the catechism can be as diverse as during family devotions, at the breakfast table, as part of a longer study including comprehension questions and praying, or as a fun memorization time with flashcards and drills.
+
+\section{Memorization Tips}
+\index{Catechesis!Memorization tips|(}There are a variety of ways to commit texts to memory and some techniques suit certain learning styles better than others. A few examples include:
+
+\begin{itemize}
+	\item Read the question and answer out loud, and repeat, repeat, repeat.
+	\item Read the question and answer out loud, try to repeat them without looking. Repeat.
+	\item Read aloud through all Part 1 questions and answers (then 2, then 3) while moving about. The combination of movement and speech strengthens a person's ability to recall text.
+	\item Record yourself saying all Part 1 questions and answers (then 2, then 3) and listen to them during everyday activities e.g. work-outs, chores, etc.
+	\item Write the questions and answers on cards and tape them in a conspicuous area. Read them aloud every time you see them.
+	\item Make flashcards with the question on one side and the answer on the other, and test yourself. Children can color these in and draw pictures on them.
+	\item Review the question and answer at night and in the morning. For children spend a few minutes at bedtime helping them remember the answer, then repeat at breakfast the next morning.
+	\item Write out the question and answer. Repeat. The process of writing also helps a person's ability to recall text.
+	\item Drill the questions and answers with another person as often as possible.
+\end{itemize} \index{Catechesis!Memorization tips|)} \index{Catechesis!Usage|)}
+
+\section{A Biblical Practice}
+In his letter to the Galatians Paul writes, ``Anyone who receives instruction in the word must share all good things with his instructor'' (Galatians 6:6)\index[gal]{6:6}. The Greek word for ``anyone who receives instruction'' is the word \emph{katechoumenos}\index{katechoumenos@{\em katechoumenos}}, one who is catechized. In other words, Paul is talking about a body of Christian doctrine ``catechism'') that was taught to them by an instructor (here the word ``catechizer''). The words ``all good things'' probably means financial support as well. In this light, the word \emph{koinoneo}\index{koinoneo@{\em koinoneo}}\thinspace{}---\thinspace{}which means ``to share'' or ``to have fellowship''\thinspace{}---\thinspace{}becomes even richer. The salary of a Christian teacher is not to be seen simply as a payment but a ``fellowship.'' Catechesis is not just one more service to be paid for, but is a rich fellowship and mutual sharing of the gifts of God.
+
+If we re-engage in this biblical practice in our churches, we will find again God's Word ``dwelling in us richly'' (Colossians 3:16)\index[col]{3:16}, because the practice of catechesis takes truth deep into our hearts, so we find ourselves thinking in biblical categories as soon as we can reason.
+
+When my son, Jonathan, was a young child my wife Kathy and I started teaching him a children's catechism. In the beginning we worked on just the first three questions:
+
+\textbf{Question 1. Who made you?\newline
+Answer.} God.
+
+\textbf{Question 2. What else did God make?\newline
+Answer.} God made all things.
+
+\textbf{Question 3. Why did God make you and all things?\newline
+Answer.}\ \ For his own glory.
+
+One day Kathy dropped Jonathan off at a babysitter's. At one point the babysitter discovered Jonathan looking out the window. ``What are you thinking about?'' she asked him. ``God,'' he said. Surprised, she responded, ``What are you thinking about God?'' He looked at her and replied, ``How he made all things for his own glory.'' She thought she had a spiritual giant on her hands! A little boy looking out the window, contemplating the glory of God in creation!
+
+What had actually happened, obviously, was that her question had triggered the question/answer response in him. He answered with the catechism. He certainly did not have the slightest idea what the ``glory of God'' meant. But the concept was in his mind and heart, waiting to be connected with new insights, teaching, and experiences.
+
+Such instruction, Princeton theologian Archibald Alexander\index[people]{Alexander, Archibald} said, is like firewood in a fireplace. Without the fire\thinspace{}---\thinspace{}the Spirit of God\thinspace{}---\thinspace{}firewood will not in itself produce a warming flame. But without fuel there can be no fire either, and that is what catechetical instruction is.
+
+\bigskip
+
+{\raggedleft
+Timothy Keller, October 2012}
+
+\cleardoublepage
+
+\chapter{\em New City Catechism}
+
+\section[Part 1. God, Creation And Fall, Law][God, Creation And Fall, Law]{Part 1. God, Creation And Fall, Law}
+
+\subsection{Q  1. What is our only hope in life and death?}
+\Children{That we are not our own but belong, body and soul, both in life and death, to God and to our Savior Jesus Christ.}
+
+\Quote{Romans 14:7--8\index[rom]{14:7--8}}{For none of us lives for ourselves alone, and none of us dies for ourselves alone. If we live, we live for the Lord; and if we die, we die for the Lord. So, whether we live or die, we belong to the Lord.}
+
+
+\subsection{Q  2. What Is God?}
+\Children{God is the creator }and sustainer \Children{of everyone and everything.} He is eternal, infinite, and unchangeable in his power and perfection, goodness and glory, wisdom, justice, and truth. Nothing happens except through him and by his will.
+
+\Quote{Psalm 86:8--10\index[psa]{86:8--10} and 15\index[psa]{86:15}}{Among the gods there is none like you, Lord; no deeds can compare with yours. All the nations you have made will come and worship before you, Lord; they will bring glory to your name. For you are great and do marvelous deeds; you alone are God {\dots} You, Lord, are a compassionate and gracious God, slow to anger, abounding in love and faithfulness.}
+
+
+\subsection{Q  3. How many persons are there in God?}
+\Children{There are three persons in }the \Children{one }true and living \Children{God: the Father, the Son, and the Holy Spirit.} They are the same in substance, equal in power and glory.
+
+\Quote{2 Corinthians 13:14\index[1co]{13:14}}{May the grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with you all.}
+
+
+\subsection{Q  4. How and why did God create us?}
+\Children{God created us male and female in his own image to }know him, love him, live with him, and \Children{glorify him.} And it is right that we who were created by God should live to his glory.
+
+\Quote{Genesis 1:27\index[gen]{1:27}}{So God created mankind in his own image, in the image of God he created them; male and female he created them.}
+
+
+\subsection{Q  5. What else did God create?}
+\Children{God created all things }by his powerful Word, \Children{and all his creation was very good}; everything flourished under his loving rule\Children{.}
+
+\Quote{Genesis 1:31\index[gen]{1:31}}{God saw all that he had made, and it was very good.}
+
+
+\subsection{Q  6. How can we glorify God?}
+We glorify God \Children{by }enjoying him, \Children{loving him}, trusting him, \Children{ and by obeying his }will, \Children{commands, and law.}
+
+\Quote{Deuteronomy 11:1\index[deu]{11:1}}{Love the \textsc{Lord} your God and keep his requirements, his decrees, his laws and his commands always.}
+
+
+\subsection{Q 7. What does the law of God require?}
+Personal, perfect, and perpetual obedience; \Children{that we love God with all our heart, soul, mind, and strength; and love our neighbor as ourselves.} What God forbids should never be done and what God commands should always be done.
+
+\Quote{Matthew 22:37--40\index[mat]{22:37--40}}{Jesus replied: ``Love the Lord your God with all your heart and with all your soul and with all your mind. This is the first and greatest commandment. And the second is like it: Love your neighbor as yourself. All the Law and the Prophets hang on these two commandments.''}
+
+\subsection{Q 8. What is the law of God stated in the Ten Commandments?}
+\Children{You shall have no other gods before me. You shall not make for yourself an idol} in the form of anything in heaven above or on the earth beneath or in the waters below\thinspace{}---\thinspace{}you shall not bow down to them or worship them\Children{. You shall not misuse the name of the \textsc{Lord} your God. Remember the Sabbath day by keeping it holy. Honor your father and your mother. You shall not murder. You shall not commit adultery. You shall not steal. You shall not give false testimony. You shall not covet.}
+
+\Quote{Exodus 20:3\index[exo]{20:3} and Deuteronomy 5:7\index[deu]{05:7@5:7}}{You shall have no other gods before me.}
+
+\subsection{Q 9. What does God require in the first, second, and third commandments?}
+\Children{First, that we know }and trust \Children{God as the only true }and living \Children{God. Second, that we avoid all idolatry }and do not worship God improperly\Children{. Third, that we treat God's name with fear and reverence}, honoring also his Word and works\Children{.}
+
+\Quote{Deuteronomy 6:13--14\index[deu]{06:13--14@6:13--14}}{Fear the \textsc{Lord} your God, serve him only and take your oaths in his name. Do not follow other gods, the gods of the peoples around you.}
+
+\subsection{Q 10. What does God require in the fourth and fifth commandments?}
+\Children{Fourth, that on the Sabbath day we spend time in }public and private \Children{worship of God}, rest from routine employment, serve the Lord and others, and so anticipate the eternal Sabbath\Children{. Fifth, that we love and honor our father and our mother}, submitting to their godly discipline and direction\Children{.}
+
+\Quote{Leviticus 19:3\index[lev]{19:3}}{Each of you must respect your mother and father, and you must observe my Sabbaths. I am the \textsc{Lord} your God.}
+
+\subsection{Q 11. What does God require in the sixth, seventh, and eighth commandments?}
+\Children{Sixth, that we do not hurt, or hate}, or be hostile to \Children{ our neighbor}, but be patient and peaceful, pursuing even our enemies with love\Children{. Seventh, that we }abstain from sexual immorality and \Children{live purely and faithfully}, whether in marriage or in single life, avoiding all impure actions, looks, words, thoughts, or desires, and whatever might lead to them\Children{. Eighth, that we do not take without permission that which belongs to someone else}, nor withhold any good from someone we might benefit\Children{.}
+
+\Quote{Romans 13:9\index[rom]{13:9}}{The commandments, ``You shall not commit adultery,'' ``You shall not murder,'' ``You shall not steal,'' ``You shall not covet,'' and whatever other command there may be, are summed up in this one command: ``Love your neighbor as yourself.''}
+
+\subsection{Q 12. What does God require in the ninth and tenth commandments?}
+\Children{Ninth, that we do not lie or deceive}, but speak the truth in love\Children{. Tenth, that we are content, not envying anyone} or resenting what God has given them or us\Children{.}
+
+\Quote{James 2:8\index[jam]{2:8}}{If you really keep the royal law found in Scripture, ``Love your neighbor as yourself,'' you are doing right.}
+
+\subsection{Q 13. Can anyone keep the law of God perfectly?}
+\Children{Since the fall, no }mere \Children{human has been able to keep the law of God perfectly}, but consistently breaks it in thought, word, and deed\Children{.}
+
+\Quote{Romans 3:10--12\index[rom]{03:10--12@3:10--12}}{There is no one righteous, not even one; there is no one who understands; there is no one who seeks God. All have turned away, they have together become worthless; there is no one who does good, not even one.}
+
+\subsection{Q 14. Did God create us unable to keep his law?}
+\Children{No, but because of the disobedience of }our first parents, \Children{Adam and Eve}, all of creation is fallen\Children{; we are all born in sin and guilt,} corrupt in our nature and \Children{ unable to keep God's law.}
+
+\Quote{Romans 5:12\index[rom]{05:12@5:12}}{Therefore, just as sin entered the world through one man, and death through sin, and in this way death came to all people, because all sinned.}
+
+\subsection{Q 15. Since no one can keep the law, what is its purpose?}
+\Children{That we may know the holy nature }and will \Children{of God, and the sinful nature }and disobedience \Children{of our hearts; and thus our need of a Savior.} The law also teaches and exhorts us to live a life worthy of our Savior.
+
+\Quote{Romans 3:20\index[rom]{03:20@3:20}}{No one will be declared righteous in God's sight by the works of the law; rather, through the law we become conscious of our sin.}
+
+\subsection{Q 16. What is sin?}
+\Children{Sin is rejecting or ignoring God in the world he created, }rebelling against him by living without reference to him, \Children{not being or doing what he requires in his law}\thinspace{}---\thinspace{}resulting in our death and the disintegration of all creation\Children{.}
+
+\Quote{1 John 3:4\index[1jo]{3:4}}{Everyone who sins breaks the law; in fact, sin is lawlessness.}
+
+\subsection{Q 17. What is idolatry?}
+\Children{Idolatry is trusting in created things rather than the Creator} for our hope and happiness, significance and security\Children{.}
+
+\Quote{Romans 1:21\index[rom]{01:21@1:21} and 25\index[rom]{01:25@1:25}}{For although they knew God, they neither glorified him as God nor gave thanks to him, but their thinking became futile and their foolish hearts were darkened {\dots} They exchanged the truth about God for a lie, and worshiped and served created things rather than the Creator.}
+
+\subsection{Q 18. Will God allow our disobedience and idolatry to go unpunished?}
+\Children{No, }every sin is against the sovereignty, holiness, and goodness of God, and against his righteous law, and \Children{God is righteously angry with our sins and will punish them }in his just judgment \Children{both in this life, and in the life to come.}
+
+\Quote{Ephesians 5:5--6\index[eph]{5:5--6}}{For of this you can be sure: No immoral, impure or greedy person\thinspace{}---\thinspace{}such a person is an idolater\thinspace{}---\thinspace{}has any inheritance in the kingdom of Christ and of God. Let no one deceive you with empty words, for because of such things God's wrath comes on those who are disobedient.}
+
+\subsection{Q 19. Is there any way to escape punishment and be brought back into God's favor?}
+\Children{Yes, }to satisfy his justice, \Children{God} himself, out of mere mercy, \Children{reconciles us to himself }and delivers us from sin and from the punishment for sin, \Children{by a Redeemer.}
+
+\Quote{Isaiah 53:10--11\index[isa]{53:10--11}}{Yet it was the \textsc{Lord's} will to crush him and cause him to suffer, and though the \textsc{Lord} makes his life an offering for sin, he will see his offspring and prolong his days, and the will of the \textsc{Lord} will prosper in his hand. After he has suffered, he will see the light of life and be satisfied; by his knowledge my righteous servant will justify many, and he will bear their iniquities.}
+
+\subsection[Q 20. Who is the Redeemer?]{Q 20. Who is the Redeemer?}
+\Children{The only Redeemer is the Lord Jesus Christ}, the eternal Son of God, in whom God became man and bore the penalty for sin himself\Children{.}
+
+\Quote{1 Timothy 2:5\index[1ti]{2:5}}{For there is one God and one mediator between God and mankind, the man Christ Jesus.}
+
+
+\section[Part 2. Christ, Redemption, Grace][Christ, Redemption, Grace]{Part 2. Christ, Redemption, Grace}
+
+\subsection{Q 21. What sort of Redeemer is needed to bring us back to God?}
+\Children{One who is truly human and also truly God.}
+
+\Quote{Isaiah 9:6\index[isa]{09:6@9:6}}{For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.}
+
+\subsection{Q 22. Why must the Redeemer be truly human?}
+\Children{That in human nature he might on our behalf perfectly obey the whole law and suffer the punishment for human sin}; and also that he might sympathize with our weaknesses\Children{.}
+
+\Quote{Hebrews 2:17\index[heb]{2:17}}{For this reason he had to be made like them, fully human in every way, in order that he might become a merciful and faithful high priest in service to God, and that he might make atonement for the sins of the people.}
+
+\subsection{Q 23. Why must the Redeemer be truly God?}
+\Children{That because of his divine nature his obedience and suffering would be perfect and effective}; and also that he would be able to bear the righteous anger of God against sin and yet overcome death\Children{.}
+
+\Quote{Acts 2:24\index[act]{02:24@2:24}}{But God raised him from the dead, freeing him from the agony of death, because it was impossible for death to keep its hold of him.}
+
+\subsection{Q 24. Why was it necessary for Christ, the Redeemer, to die?}
+Since death is the punishment for sin, \Children{Christ died willingly in our place to deliver us from the power and penalty of sin and bring us back to God.} By his substitutionary atoning death, he alone redeems us from hell and gains for us forgiveness of sin, righteousness, and everlasting life.
+
+\Quote{Colossians 1:21--22\index[col]{1:21--22}}{Once you were alienated from God and were enemies in your minds because of your evil behavior. But now he has reconciled you by Christ's physical body through death to present you holy in his sight, without blemish and free from accusation.}
+
+\subsection{Q 25. Does Christ's death mean all our sins can be forgiven?}
+\Children{Yes, because Christ's death on the cross fully paid the penalty for our sin, God} graciously imputes Christ's righteousness to us as if it were our own and \Children{will remember our sins no more.}
+
+\Quote{2 Corinthians 5:21\index[2co]{5:21}}{God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.}
+
+\subsection{Q 26. What else does Christ's death redeem?}
+Christ's death is the beginning of the redemption and renewal of \Children{every part of fallen creation}, as he powerfully directs all things for his own glory and creation's good\Children{.}
+
+\Quote{Colossians 1:19--20\index[col]{1:19--20}}{For God was pleased to have all his fullness dwell in him, and through him to reconcile to himself all things, whether things on earth or things in heaven, by making peace through his blood, shed on the cross.}
+
+\subsection{Q 27. Are all people, just as they were lost through Adam, saved through Christ?}
+\Children{No, only those who are elected\footnote{Editor's note: see also Q 32.} by God and united to Christ by faith.} Nevertheless God in his mercy demonstrates common grace even to those who are not elect, by restraining the effects of sin and enabling works of culture for human well-being.
+
+\Quote{Romans 5:17\index[rom]{05:17@5:17}}{For if, by the trespass of the one man, death reigned through that one man, how much more will those who receive God's abundant provision of grace and of the gift of righteousness reign in life through the one man, Jesus Christ!}
+
+\subsection{Q 28. What happens after death to those not united to Christ by faith?}
+At the day of judgment they will receive the fearful but just sentence of condemnation pronounced against them. \Children{They will be cast out from the} favorable \Children{presence of God, into hell, to be justly} and grievously \Children{punished, forever.}
+
+\Quote{John 3:16--18\index[joh]{03:16--18@3:16--18} and 36\index[joh]{03:36@3:36}}{For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God's one and only Son {\dots} Whoever believes in the Son has eternal life, but whoever rejects the Son will not see life, for God's wrath remains on them.}
+
+\subsection{Q 29. How can we be saved?}
+\Children{Only by faith in Jesus Christ and in his substitutionary atoning death on the cross}; so even though we are guilty of having disobeyed God and are still inclined to all evil, nevertheless, God, without any merit of our own but only by pure grace, imputes to us the perfect righteousness of Christ when we repent and believe in him\Children{.}
+
+\Quote{Ephesians 2:8--9\index[eph]{2:8--9}}{For it is by grace you have been saved, through faith\thinspace{}---\thinspace{}and this is not from yourselves, it is the gift of God\thinspace{}---\thinspace{}not by works, so that no one can boast.}
+
+\subsection{Q 30. What is faith in Jesus Christ?}
+Faith in Jesus Christ is acknowledging the truth of everything that God has revealed in his Word, trusting in him, and also \Children{receiving and resting on him alone for salvation as he is offered to us in the gospel.}
+
+\Quote{Galatians 2:20\index[gal]{2:20}}{I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me.}
+
+\subsection{Q 31. What do we believe by true faith?}
+Everything taught to us in the gospel. The Apostles' Creed expresses what we believe in these words: \Children{We believe in God the Father Almighty, Maker of heaven and earth; and in Jesus Christ his only Son our Lord, who was conceived by the Holy Spirit, born of the virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell. The third day he rose again from the dead. He ascended into heaven, and is seated at the right hand of God the Father Almighty; from there he will come to judge the living and the dead. We believe in the Holy Spirit, the holy catholic church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting.}
+
+\Quote{Jude 1:3\index[jud]{1:3}}{I {\dots} urge you to contend for the faith that was once for all entrusted to God's holy people.}
+
+\subsection{Q 32. What do justification and sanctification mean?}
+\Children{Justification means our declared righteousness before God}, made possible by Christ's death and resurrection for us\Children{.} \Children{Sanctification means our gradual, growing righteousness}, made possible by the Spirit's work in us\Children{.}
+
+\Quote{1 Peter 1:1--2\index[1pe]{1:1--2}}{To God's elect {\dots} who have been chosen according to the foreknowledge of God the Father, through the sanctifying work of the Spirit, to be obedient to Jesus Christ and sprinkled with his blood: Grace and peace be yours in abundance.}
+
+\subsection{Q 33. Should those who have faith in Christ seek their salvation through their own works, or anywhere else?}
+\Children{No, }they should not, \Children{as everything necessary to salvation is found in Christ.} To seek salvation through good works is a denial that Christ is the only Redeemer and Savior.
+
+\Quote{Galatians 2:16\index[gal]{2:16}}{Know that a person is not justified by the works of the law, but by faith in Jesus Christ. So we, too, have put our faith in Christ Jesus that we may be justified by faith in Christ and not by the works of the law, because by the works of the law no one will be justified.}
+
+\subsection{Q 34. Since we are redeemed by grace alone, through Christ alone, must we still do good works and obey God's Word?}
+\Children{Yes, }because Christ, having redeemed us by his blood, also renews us by his Spirit; \Children{so that our lives may show love and gratitude to God; }so that we may be assured of our faith by the fruits; \Children{and so that by our godly behavior others may be won to Christ.}
+
+\Quote{1 Peter 2:9--12\index[1pe]{2:9--12}}{But you are a chosen people, a royal priesthood, a holy nation, God's special possession, that you may declare the praises of him who called you out of darkness into his wonderful light. Once you were not a people, but now you are the people of God; once you had not received mercy, but now you have received mercy. Dear friends, I urge you, as foreigners and exiles, to abstain from sinful desires, which wage war against your soul. Live such good lives among the pagans that, though they accuse you of doing wrong, they may see your good deeds and glorify God on the day he visits us.}
+
+\subsection{Q 35. Since we are redeemed by grace alone, through faith alone, where does this faith come from?}
+All the gifts we receive \Children{from} Christ we receive through \Children{the Holy Spirit}, including faith itself\Children{.}
+
+\Quote{Titus 3:4--6\index[tit]{3:4--6}}{But when the kindness and love of God our Savior appeared, he saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit, whom he poured out on us generously through Jesus Christ our Savior.}
+
+\section[Part 3. Spirit, Restoration, Growing In Grace][Spirit, Restoration, Growing In Grace]{Part 3. Spirit, Restoration, Growing In Grace}
+
+\subsection{Q 36. What do we believe about the Holy Spirit?}
+\Children{That he is God, coeternal with the Father and the Son}, and that God grants him irrevocably to all who believe\Children{.}
+
+\Quote{John 14:16--17\index[joh]{14:16--17}}{I will ask the Father, and he will give you another advocate to help you and be with you forever\thinspace{}---\thinspace{}the Spirit of truth. The world cannot accept him, because it neither sees him nor knows him. But you know him, for he lives with you and will be in you.}
+
+\subsection{Q 37. How does the Holy Spirit help us?}
+\Children{The Holy Spirit convicts us of our sin}, comforts us, guides us, gives us spiritual gifts and the desire to obey God; \Children{and he enables us to pray and to understand God's Word.}
+
+\Quote{Ephesians 6:17--18\index[eph]{6:17--18}}{Take the helmet of salvation and the sword of the Spirit, which is the word of God. And pray in the Spirit on all occasions with all kinds of prayers and requests.}
+
+\subsection{Q 38. What is prayer?}
+\Children{Prayer is pouring out our hearts to God} in praise, petition, confession of sin, and thanksgiving\Children{.}
+
+\Quote{Psalm 62:8\index[psa]{62:8}}{Trust in him at all times, you people; pour out your hearts to him, for God is our refuge.}
+
+\subsection{Q 39. With what attitude should we pray?}
+\Children{With love, perseverance, and gratefulness}; in humble submission to God's will, knowing that, for the sake of Christ, he always hears our prayers\Children{.}
+
+\Quote{Philippians 4:6\index[phi]{4:6}}{Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.}
+
+\subsection{Q 40. What should we pray?}
+\Children{The whole Word of God directs }and inspires \Children{us in what we should pray}, including the prayer Jesus himself taught us\Children{.}
+
+\Quote{Ephesians 3:14--21\index[eph]{3:14--21}}{For this reason I kneel before the Father, from whom every family in heaven and on earth derives its name. I pray that out of his glorious riches he may strengthen you with power through his Spirit in your inner being, so that Christ may dwell in your hearts through faith. And I pray that you, being rooted and established in love, may have power, together with all the Lord's holy people, to grasp how wide and long and high and deep is the love of Christ, and to know this love that surpasses knowledge\thinspace{}---\thinspace{}that you may be filled to the measure of all the fullness of God. Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us, to him be glory in the church and in Christ Jesus throughout all generations, for ever and ever! Amen.}
+
+\subsection{Q 41. What is the Lord's Prayer?}
+\Children{Our Father in heaven, hallowed\footnote{Editor's note: or ``holy''.} be your name, your kingdom come, your will be done, on earth as it is in heaven. Give us today our daily bread. And forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from evil.}
+
+\Quote{Matthew 6:9\index[mat]{06:9@6:9}}{This, then, is how you should pray: ``Our Father in heaven, hallowed be your name {\dots}''}
+
+\subsection{Q 42. How is the Word of God to be read and heard?}
+\Children{With diligence, preparation, and prayer; so that we may accept it with faith}, store it in our hearts,\Children{ and practice it in our lives.}
+
+\Quote{2 Timothy 3:16--17\index[2ti]{3:16--17}}{All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, so that the servant of God may be thoroughly equipped for every good work.}
+
+\subsection{Q 43. What are the sacraments or ordinances?}
+The sacraments or ordinances given by God and instituted by Christ, namely \Children{baptism and the Lord's Supper}, are visible signs and seals that we are bound together as a community of faith by his death and resurrection\Children{.} By our use of them the Holy Spirit more fully declares and seals the promises of the gospel to us.
+
+\Quote{Romans 6:4\index[rom]{06:4@6:4}}{We were therefore buried with him through baptism into death in order that, just as Christ was raised from the dead through the glory of the Father, we too may live a new life.}
+
+\Quote{Luke 22:19--20\index[luk]{22:19--20}}{And he took bread, gave thanks and broke it, and gave it to them, saying, ``This is my body given for you; do this in remembrance of me.'' In the same way, after the supper he took the cup, saying, ``This cup is the new covenant in my blood, which is poured out for you.''}
+
+\subsection{Q 44. What is baptism?}
+\Children{Baptism is the washing with water in the name of the Father, the Son, and the Holy Spirit}; it signifies and seals our adoption into Christ, our cleansing from sin, and our commitment to belong to the Lord and to his church\Children{.}
+
+\Quote{Matthew 28:19\index[mat]{28:19}}{Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.}
+
+\subsection{Q 45. Is baptism with water the washing away of sin itself?}
+\Children{No, only the blood of Christ }and the renewal of the Holy Spirit \Children{can cleanse us from sin.}
+
+\Quote{Luke 3:16\index[luk]{03:16@3:16}}{John answered them all, ``I baptize you with water. But one who is more powerful than I will come, the straps of whose sandals I am not worthy to untie. He will baptize you with the Holy Spirit and fire.''}
+
+\subsection{Q 46. What is the Lord's Supper?}
+\Children{Christ commanded all Christians to eat bread and to drink from the cup in thankful remembrance of him} and his death\Children{.} The Lord's Supper is a celebration of the presence of God in our midst; bringing us into communion with God and with one another; feeding and nourishing our souls. It also anticipates the day when we will eat and drink with Christ in his Father's kingdom.
+
+\Quote{1 Corinthians 11:23--26\index[1co]{11:23--26}}{The Lord Jesus, on the night he was betrayed, took bread, and when he had given thanks, he broke it and said, ``This is my body, which is for you; do this in remembrance of me.'' In the same way, after supper he took the cup, saying, ``This cup is the new covenant in my blood; do this, whenever you drink it, in remembrance of me.'' For whenever you eat this bread and drink this cup, you proclaim the Lord's death until he comes.}
+
+\subsection{Q 47. Does the Lord's Supper add anything to Christ's atoning work?}
+\Children{No, Christ died once for all.} The Lord's Supper is a covenant meal celebrating Christ's atoning work; as it is also a means of strengthening our faith as we look to him, and a foretaste of the future feast. But those who take part with unrepentant hearts eat and drink judgment on themselves.
+
+\Quote{1 Peter 3:18\index[1pe]{3:18}}{For Christ died for sins once for all, the righteous for the unrighteous, to bring you to God.}
+
+\subsection{Q 48. What is the church?}
+God chooses and preserves for himself \Children{a community elected for eternal life and united by faith, who love, follow, learn from, and worship God together.} God sends out this community to proclaim the gospel and prefigure Christ's kingdom by the quality of their life together and their love for one another.
+
+\Quote{2 Thessalonians 2:13\index[2th]{2:13}}{But we ought always to thank God for you, brothers and sisters loved by the Lord, because God chose you as first-fruits to be saved through the sanctifying work of the Spirit and through belief in the truth.}
+
+\subsection{Q 49. Where is Christ now?}
+\Children{Christ rose bodily from the grave on the third day after his death and is seated at the right hand of the Father}, ruling his kingdom and interceding for us, until he returns to judge and renew the whole world\Children{.}
+
+\Quote{Ephesians 1:19--21\index[eph]{1:19--21}}{That power is the same as the mighty strength he exerted when he raised Christ from the dead and seated him at his right hand in the heavenly realms, far above all rule and authority, power and dominion, and every name that is invoked, not only in the present age but also in the one to come.}
+
+\subsection{Q 50. What does Christ's resurrection mean for us?}
+\Children{Christ triumphed over sin and death} by being physically resurrected\Children{, so that all who trust in him are raised to new life in this world and to everlasting life in the world to come.} Just as we will one day be resurrected, so this world will one day be restored. But those who do not trust in Christ will be raised to everlasting death.
+
+\Quote{1 Thessalonians 4:13--14\index[1th]{4:13--14}}{Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him.}
+
+\subsection{Q 51. Of what advantage to us is Christ's ascension?}
+\Children{Christ }physically ascended on our behalf, just as he came down to earth physically on our account, and he \Children{is now advocating for us in the presence of his Father}, preparing a place for us,\Children{ and also sends us his Spirit.}
+
+\Quote{Romans 8:34\index[rom]{08:34@8:34}}{Christ Jesus who died\thinspace{}---\thinspace{}more than that, who was raised to life\thinspace{}---\thinspace{}is at the right hand of God and is also interceding for us.}
+
+\subsection{Q 52. What hope does everlasting life hold for us?}
+It reminds us \Children{that }this present fallen world is not all there is; soon \Children{we will live with and enjoy God forever }in the new city, \Children{in the new heaven and the new earth, where we will be }fully and \Children{forever freed from all sin }and will inhabit renewed, resurrection bodies \Children{in a renewed, restored creation.}
+
+\Quote{Revelation 21:1--4\index[rev]{21:1--4}}{Then I saw a new heaven and a new earth, for the first heaven and the first earth had passed away, and there was no longer any sea. I saw the Holy City, the new Jerusalem, coming down out of heaven from God, prepared as a bride beautifully dressed for her husband. And I heard a loud voice from the throne saying, ``Look! God's dwelling place is now among the people, and he will dwell with them. They will be his people, and God himself will be with them and be their God. He will wipe every tear from their eyes. There will be no more death or mourning or crying or pain, for the old order of things has passed away.''}
+
+
+\bigskip
+
+\chapter{FAQ\,---\,{\em New City Catechism}}
+
+Most of your questions will be answered by the introduction to \emph{New City Catechism}. Please read that first.
+
+\section[What Age Is The Children's Catechism Aimed At?][Catechism For What Age Children?]{What Age Is The Children's Catechism Aimed At?}
+
+\index{Children!Age appropriateness}This very much depends on your children and your way of using the catechism. Memorization can begin at an early age but if you want to use the Bible verses and prayers then 4\textsuperscript{th} to 5\textsuperscript{th} graders will get the most out of it. On the other hand, if your children are able to memorize and recite the Apostles' Creed\index{Apostles' Creed} (the longest catechism answer) then they should be able memorize the entire \emph{New City Catechism}\/ with ease.
+
+\section[Why Is Some Of The Text In Color In The Answers?][Why Is Some Of The Text In Color?]{Why Is Some Of The Text In Color In The Answers?}
+
+\index{Answers!Children}\index{Answers!Adults}In the adult version the children's answer appears in \Children{color}\footnote{Editor's note: in the black \& white version, the text is simply \Children{bolded}.} to differentiate it from the longer adult answer. \emph{New City Catechism}\/ is a joint adult and children's catechism. In other words, the same questions are asked of both children and adults, and the children's answer is always part of the adult answer. This means that as parents are teaching it to their children they are learning their answer to the question at the same time, albeit an abridged version. The adult answer is always an expanded version of the children's answer and so the \Children{colored} text shows the children's answer within the adult one.
+
+\section[In What Order Should I Go Through The Verses, Commentaries, And So On?][Use Of The Additional Resources]{In What Order Should I Go Through The Verses, Commentaries, And So On?}
+
+Start by reading the Bible verse that accompanies each question and answer, and seeing how it applies and how the question and answer derive from it. Then read the text commentary, and then watch the video commentary. If you have access to either of the further reading books, read the recommended chapter(s). End your time in prayer, using the attached prayer as a starting point and for inspiration.
+
+\section[How Do I Use {\em New City Catechism}?][How To Use {\em New City Catechism}]{How Do I Use {\em New City Catechism}?}
+
+\index{Catechesis!Personal}\emph{New City Catechism}\/ consists of 52 questions and answers so the easiest way to use it is to memorize one question and answer each week of the year. Because it is intended to be dialogical it is best to learn it with others, enabling you to drill one another on the answers not only one at a time but once you have learned 10 of them, then 20 of them, and so on. The Bible verse, written and filmed commentary, and prayer that are attached to each question and answer can be used as your devotion on a chosen day of the week to help you think through and meditate on the issues and applications that arise from the question and answer.
+
+\index{Catechesis!Family}\section[How Do I Use {\em New City Catechism}\/ With My Family?][{\em New City Catechism}\/ With A Family]{How Do I Use {\em New City Catechism}\/ With My Family?}
+
+\emph{New City Catechism}\/ consists of 52 questions and answers so the easiest way to use it is to memorize one question and answer together as a family each week of the year. It is intended for parents to help their children memorize the children's answer and then for parents to learn the longer, extended adult answer themselves. Parents will have different ways of approaching the memorization process depending on their children and their particular circumstances-so there are no prescribed times of day or particular devotional practices attached. When and how parents use the catechism can be as diverse as during family devotions, at the breakfast table, as part of a longer study including comprehension questions and praying, or as a fun memorization time with flashcards and drills. Parents may decide to read aloud the Bible verse and pray aloud the children's prayer attached to each question and answer, or it may be appropriate for your child to read and pray aloud themselves.
+
+\index{Catechesis!Groups}\section[How Do I Use {\em New City Catechism}\/ With My Study Group?][{\em New City Catechism}\/ With A Study Group]{How Do I Use {\em New City Catechism}\/ With My Study Group?}
+
+Groups may decide to spend the first 5--10 minutes of their study time looking together at only one question and answer thus completing the catechism in a year, or they may prefer to study and learn the questions and answers over a contracted length of time, for example by memorizing 5 or 6 questions a week and meeting together to quiz one another, discuss them, as well as read and watch the accompanying commentaries.
+
+\section[Why Are Some Of The Prayers Longer Than Others?][Why Are Some Prayers Longer?]{Why Are Some Of The Prayers Longer Than Others?}
+
+\index{Prayers}The prayers are intended to help and inspire you in prayer by showing you some of the ways historic preachers and authors prayed to and praised God. Please feel free to lengthen or shorten the prayers as is most helpful to you\footnote{Editor's note: the prayers may be found on the web site.}.
+
+\section[Which Catechism Should I Learn After This One?][Next Catechism After This One?]{Which Catechism Should I Learn After This One?}
+
+\emph{New City Catechism}\/ is based on and adapted from Calvin's\index[people]{Calvin, John} {\em Geneva Catechism}\index[book]{Geneva Catechism}, the {\em Westminster Shorter}\index[book]{Westminster Shorter Catechism}\/ and {\em Larger Catechism}s\index[book]{Westminster Larger Catechism}, and especially the {\em Heidelberg Catechism}\index[book]{Heidelberg Catechism}. A good next step would be to learn either Westminster Shorter or Heidelberg.
+
+\section[Any Additional Resources You Would Recommend?][Additional Resources?]{Any Additional Resources You Would Recommend?}
+
+Kevin DeYoung\index[people]{DeYoung, Kevin} has written an excellent exploration of the \emph{Heidelberg Catechism}\index[book]{Heidelberg Catechism}\/ in \emph{The Good News We Almost Forgot: Rediscovering the Gospel\index[book]{Good News We Almost Forgot, The}\/ in a 16\textsuperscript{th} Century Catechism}\/ (published by Moody).
+
+Thomas Watson's\index[people]{Watson, Thomas} \emph{A Body of Divinity\index[book]{Body of Divinity, A}}\/ (published by Banner of Truth or Kessinger) is a great exposition of the \emph{Westminster Shorter Catechism}.\index[book]{Westminster Shorter Catechism}
+
+Thomas F.\ Torrance's\index[people]{Torrance, Thomas F.} \emph{The School of Faith, Catechisms of the Reformed Church}\index[book]{School of Faith, The}\/ (published by Wipf \& Stock) has a fascinating introduction to catechesis as well as being a great collection of the historical catechisms.
+
+\emph{Grounded in the Gospel\index[book]{Grounded in the Gospel}}\/ by Gary Parrett\index[people]{Parrett, Gary} and J.~I.\ Packer\index[people]{Packer, J.I.} (published by Baker) provides a case for why catechetical instruction is still important for churches and discipleship today.
+
+%\cleardoublepage
+
+\backmatter
+
+\chapter{Indices}
+
+\section{General Index}
+\vspace{-3em}\renewcommand\indexname{}
+\printindex
+
+\section{People}
+
+\vspace{-3em}\renewcommand\indexname{}
+\printindex[people]
+
+\section{Books}
+
+\vspace{-3em}\renewcommand\indexname{}
+\printindex[book]
+
+\section{Bible References}
+
+\printindex[gen]
+
+\printindex[exo]
+
+\printindex[lev]
+
+\printindex[num]
+
+\printindex[deu]
+
+\printindex[jos]
+
+\printindex[jdg]
+
+\printindex[rut]
+
+\printindex[1sa]
+
+\printindex[2sa]
+
+\printindex[1ki]
+
+\printindex[2ki]
+
+\printindex[1ch]
+
+\printindex[2ch]
+
+\printindex[ezr]
+
+\printindex[neh]
+
+\printindex[est]
+
+\printindex[job]
+
+\printindex[psa]
+
+\printindex[pro]
+
+\printindex[ecc]
+
+\printindex[son]
+
+\printindex[isa]
+
+\printindex[jer]
+
+\printindex[lam]
+
+\printindex[eze]
+
+\printindex[dan]
+
+\printindex[hos]
+
+\printindex[joe]
+
+\printindex[amo]
+
+\printindex[oba]
+
+\printindex[jon]
+
+\printindex[mic]
+
+\printindex[nah]
+
+\printindex[hab]
+
+\printindex[zep]
+
+\printindex[hag]
+
+\printindex[zec]
+
+\printindex[mal]
+
+\printindex[mat]
+
+\printindex[mar]
+
+\printindex[luk]
+
+\printindex[joh]
+
+\printindex[act]
+
+\printindex[rom]
+
+\printindex[1co]
+
+\printindex[2co]
+
+\printindex[gal]
+
+\printindex[eph]
+
+\printindex[phi]
+
+\printindex[col]
+
+\printindex[1th]
+
+\printindex[2th]
+
+\printindex[1ti]
+
+\printindex[2ti]
+
+\printindex[tit]
+
+\printindex[phm]
+
+\printindex[heb]
+
+\printindex[jam]
+
+\printindex[1pe]
+
+\printindex[2pe]
+
+\printindex[1jo]
+
+\printindex[2jo]
+
+\printindex[3jo]
+
+\printindex[jud]
+
+\printindex[rev]
+
+
+
+\pagestyle{empty}
+
+\hspace{1in}
+
+\newpage
+
+\pagestyle{empty}
+
+\vfill
+
+
+\begin{center}
+%\includegraphics[width=1.3366in,height=2in]{newcitycatechism-img001.png}
+\includegraphics[height=1in]{newcitycatechism-img001.png}
+\end{center}
+
+\vfill
+
+\begin{center}
+\begin{minipage}{3in}
+\begin{center}
+St.\ John the Evangelist Anglican Church
+
+PO Box 387, Willow Grove, PA, 19090-0387
+
+215-396-1970
+
+www.toknowchrist.org
+
+info@toknowchrist.org
+\end{center}
+\end{minipage}
+\end{center}
+
+\vfill
+
+\end{document}
+

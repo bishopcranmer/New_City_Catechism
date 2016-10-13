@@ -1,0 +1,57 @@
+One-piece Book Cover for 6x9 book
+
+- The file you upload must be a PDF, JPG, GIF, or PNG.
+
+- Dimensions:
+	Spine width: 6.57 Postscript points wide (0.091") (27 px)
+	Spine begins 441 Postscript points (6.125") (1838 px) from the left.
+	Total cover width: 888.57 X 666 Postscript points (12.341" X 9.250") (3702px X 2775px)
+
+- If using an image, its resolution should be set to 300dpi.
+
+Sample from Lulu yields following dimensions and relationships:
+
+113.08 pix per in - this gives ratios
+
+Total width = 961
+Total height = 720
+
+BACK COVER:
+
+Text area:
+	Top left corner: 50 x 45
+	Bottom left corner: 50 x 575
+	Top right: 435 x 45
+	Bottom right: 435 x 575
+	
+Inside the text area:
+	Picture box is 90,80 - - - - 210,80
+					|				|
+					|				|
+					|				|
+					|				|
+					|				|
+					|				|
+					90,205 - - - - -210,205
+					
+	Main text area  95,230 - - - - -390,230
+					|				|
+					|				|
+					|				|
+					|				|
+					|				|
+					|				|
+					90, 575-50 - - 390, 575-50
+					
+	2ndary text area picture box +50 to the right, with 50 px margin
+	
+Box for id:
+	250, 600 to 435, 675
+
+small id and www
+	170,650 and 230,675
+	
+FRONT COVER
+	Subtitle start 150 down, title 220 down
+	Type size?
+	
